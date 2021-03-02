@@ -137,7 +137,7 @@ int main(void)
 			ADCOutputConverted = (ADCChannel[0].data/4096.0)*3.3*1000;
 		}
 		if (ADCMode == 1) { //from datasheet v25=0.76v avg_slope=2.5
-			ADCOutputConverted = ((((ADCChannel[1].data/4096.0)*3.3*1000)-7.6*1000)/2.5)+25;
+			ADCOutputConverted = ((((ADCChannel[1].data/4096.0)*3.3*1000)-0.76*1000)/2.5)+25;
 		}
 	}
   /* USER CODE END 3 */
