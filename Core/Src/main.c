@@ -134,7 +134,7 @@ int main(void)
 			SwitchState[1] = SwitchState[0];
 		}
 		if (ADCMode == 0) {
-			ADCOutputConverted = (ADCChannel[0].data/4096.0)*3.3*1000;
+			ADCOutputConverted = (ADCChannel[0].data/4096.0)*3.3*1000;//0-4096 ---> 0-3.3 read ?
 		}
 		if (ADCMode == 1) { //from datasheet v25=0.76v avg_slope=2.5
 			ADCOutputConverted = ((((ADCChannel[1].data/4096.0)*3.3*1000)-0.76*1000)/2.5)+25;
